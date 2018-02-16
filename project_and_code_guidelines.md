@@ -1,16 +1,16 @@
 
-## 1.1 File naming
+## 1.0 File naming
 
-### 1.1.1 Class files
+### 1.0 Class files
 Class names are written in [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase).
 
 For classes that extend an Android component, the name of the class should end with the name of the component; for example: `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
 
-### 1..2 Resources files
+### 2.0 Resources files
 
 Resources file names are written in __lowercase_underscore__.
 
-#### 1.1.2.1 Drawable files
+#### 2.1 Drawable files
 
 Naming conventions for drawables:
 
@@ -48,7 +48,7 @@ Naming conventions for selector states:
 | Selected     | `_selected`     | `btn_order_selected.9.png`  |
 
 
-#### 1.1.2.2 Layout files
+#### 2.1.1 Layout files
 
 Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the `SignInActivity`, the name of the layout file should be `activity_sign_in.xml`.
 
@@ -64,18 +64,18 @@ A slightly different case is when we are creating a layout that is going to be i
 
 Note that there are cases where these rules will not be possible to apply. For example, when creating layout files that are intended to be part of other layouts. In this case you should use the prefix `partial_`.
 
-#### 1.1.2.3 Menu files
+#### 2.1.2 Menu files
 
 Similar to layout files, menu files should match the name of the component. For example, if we are defining a menu file that is going to be used in the `UserActivity`, then the name of the file should be `activity_user.xml`
 
 A good practice is to not include the word `menu` as part of the name because these files are already located in the `menu` directory.
 
-#### 1.1.2.4 Values files
+#### 2.1.3 Values files
 
 Resource files in the values folder should be __plural__, e.g. `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
 
 
-### 2.2.14 Arguments in Fragments and Activities
+### 2.1.4 Arguments in Fragments and Activities
 
 When data is passed into an `Activity `or `Fragment` via an `Intent` or a `Bundle`, the keys for the different values __must__ follow the rules described in the section above.
 
@@ -107,9 +107,9 @@ __Note 1__: These methods should go at the top of the class before `onCreate()`.
 
 __Note 2__: If we provide the methods described above, the keys for extras and arguments should be `private` because there is not need for them to be exposed outside the class.
 
-## 2.3 XML style rules
+## 2.2 XML style rules
 
-### 2.3.1 Use self closing tags
+### 2.2.1 Use self closing tags
 
 When an XML element doesn't have any contents, you __must__ use self closing tags.
 
@@ -134,11 +134,11 @@ This is __bad__ :
 ```
 
 
-### 2.3.2 Resources naming
+### 2.2.2 Resources naming
 
 Resource IDs and names are written in __lowercase_underscore__.
 
-#### 2.3.2.1 ID naming
+#### 2.2.3 ID naming
 
 IDs should be prefixed with the name of the element in lowercase underscore followed by the view first name and an action name at the end. For example:
 
@@ -150,7 +150,7 @@ IDs should be prefixed with the name of the element in lowercase underscore foll
 | `Button`           | `LoginActivity`   | `Login with email`  |`button_login_email`|
 
 
-#### 2.3.2.2 Strings
+#### 2.2.4 Strings
 
 String names start with a prefix that identifies the section they belong to. For example `registration_email_hint` or `registration_name_hint`. If a string __doesn't belong__ to any section, then you should follow the rules below:
 
@@ -164,14 +164,14 @@ String names start with a prefix that identifies the section they belong to. For
 
 
 
-#### 2.3.2.3 Styles and Themes
+#### 2.2.5 Styles and Themes
 
 Unless the rest of resources, style names are written in __UpperCamelCase__.
 
 
-## 2.4 Tests style rules
+## 3.0 Tests style rules
 
-### 2.4.1 Unit tests
+### 3.0.1 Unit tests
 
 Test classes should match the name of the class the tests are targeting, followed by `Test`. For example, if we create a test class that contains tests for the `DatabaseHelper`, we should name it `DatabaseHelperTest`.
 
@@ -184,7 +184,7 @@ Precondition and/or expected behaviour may not always be required if the test is
 
 Sometimes a class may contain a large amount of methods, that at the same time require several tests for each method. In this case, it's recommendable to split up the test class into multiple ones. For example, if the `DataManager` contains a lot of methods we may want to divide it into `DataManagerSignInTest`, `DataManagerLoadUsersTest`, etc. Generally you will be able to see what tests belong together because they have common [test fixtures](https://en.wikipedia.org/wiki/Test_fixture).
 
-### 2.4.2 Espresso tests
+### 3.0.2 Espresso tests
 
 Every Espresso test class usually targets an Activity, therefore the name should match the name of the targeted Activity followed by `Test`, e.g. `SignInActivityTest`
 
