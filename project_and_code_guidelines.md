@@ -143,11 +143,11 @@ Resource IDs and names are written in __lowercase_underscore__.
 IDs should be prefixed with the name of the element in lowercase underscore followed by the view first name and a action name at the end. For example:
 
 
-| Element            | Action            | View          | ResultView       |
+| Element            | View            | Action          | ResultView       |
 | -----------------  | ----------------- |---------------|----------------- |
-| `TextView`         | `App title`       |`MainActivity` |`textview_main_title`|
-| `ImageView`        | `User photo`      |`AccountFragment`|`imageview_account_photo`|
-| `Button`           | `Login with email`| `LoginActivity` |`button_login_email`|
+| `TextView`         | `MainActivity`    | `App title`   |`textview_main_title`|
+| `ImageView`        | `AccountFragment` | `User photo`  |`imageview_account_photo`|
+| `Button`           | `LoginActivity`   | `Login with email`  |`button_login_email`|
 
 Image view example:
 
