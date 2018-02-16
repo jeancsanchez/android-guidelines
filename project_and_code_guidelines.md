@@ -140,7 +140,7 @@ Resource IDs and names are written in __lowercase_underscore__.
 
 #### 2.3.2.1 ID naming
 
-IDs should be prefixed with the name of the element in lowercase underscore followed by the view first name and a action name at the end. For example:
+IDs should be prefixed with the name of the element in lowercase underscore followed by the view first name and an action name at the end. For example:
 
 
 | Element            | View            | Action          | ResultView       |
@@ -149,24 +149,6 @@ IDs should be prefixed with the name of the element in lowercase underscore foll
 | `ImageView`        | `AccountFragment` | `User photo`  |`imageview_account_photo`|
 | `Button`           | `LoginActivity`   | `Login with email`  |`button_login_email`|
 
-Image view example:
-
-```xml
-<ImageView
-    android:id="@+id/imageview_profile"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
-```
-
-Menu example:
-
-```xml
-<menu>
-	<item
-        android:id="@+id/menu_done"
-        android:title="Done" />
-</menu>
-```
 
 #### 2.3.2.2 Strings
 
@@ -186,15 +168,6 @@ String names start with a prefix that identifies the section they belong to. For
 
 Unless the rest of resources, style names are written in __UpperCamelCase__.
 
-### 2.3.3 Attributes ordering
-
-As a general rule you should try to group similar attributes together. A good way of ordering the most common attributes is:
-
-1. View Id
-2. Style
-3. Layout width and layout height
-4. Other layout attributes, sorted alphabetically
-5. Remaining attributes, sorted alphabetically
 
 ## 2.4 Tests style rules
 
