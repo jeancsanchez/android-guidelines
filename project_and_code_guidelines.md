@@ -107,19 +107,6 @@ __Note 1__: These methods should go at the top of the class before `onCreate()`.
 
 __Note 2__: If we provide the methods described above, the keys for extras and arguments should be `private` because there is not need for them to be exposed outside the class.
 
-### 2.2.15 Line length limit
-
-Code lines should not exceed __100 characters__. If the line is longer than this limit there are usually two options to reduce its length:
-
-* Extract a local variable or method (preferable).
-* Apply line-wrapping to divide a single line into multiple ones.
-
-There are two __exceptions__ where it is possible to have lines longer than 100:
-
-* Lines that are not possible to split, e.g. long URLs in comments.
-* `package` and `import` statements.
-
-
 ## 2.3 XML style rules
 
 ### 2.3.1 Use self closing tags
@@ -153,15 +140,15 @@ Resource IDs and names are written in __lowercase_underscore__.
 
 #### 2.3.2.1 ID naming
 
-IDs should be prefixed with the name of the element in lowercase underscore. For example:
+IDs should be prefixed with the name of the element in lowercase underscore followed by the view first name and a action name at the end. For example:
 
 
-| Element            | Prefix            |
+View -> MainActivity
+| Element            | Action            | View          | Result
 | -----------------  | ----------------- |
-| `TextView`           | `textview_`             |
-| `ImageView`          | `imageview_`            |
-| `Button`             | `button_`           |
-| `Menu`               | `menu_`             |
+| `TextView`           | `App title` | `MainActivity`| `textview_main_title`  
+| `ImageView`          |  `User photo`       | `AccountFragment` | `imageview_account_photo`
+| `Button`             |   `Login with email`         | `LoginActivity` | `button_login_email`
 
 Image view example:
 
